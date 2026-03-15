@@ -290,6 +290,37 @@ Controlled by sudoers policy
 
 -------------------------------------------------------------------------------------------------------------------------------------------
 
+# set GID
+
+| Bit            | Normal execute | SUID / SGID | Symbol in `ls -l` |
+| -------------- | -------------- | ----------- | ----------------- |
+| Owner execute  | x              | SUID        | `s`               |
+| Group execute  | x              | SGID        | `s`               |
+| Others execute | x              | Sticky      | `t`               |
+
+SGID on a file:
+When the program runs, it executes with the group privileges of the file’s group owner, instead of the user’s normal group.
+
+SGID on a directory works differently:
+
+Any new file created inside the directory inherits the directory’s group instead of the creating user’s default group.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
