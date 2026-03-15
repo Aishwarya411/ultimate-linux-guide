@@ -270,7 +270,15 @@ This is similar to how **SUID allows limited privileged operations**.
 # 10. Short Definition
 
 **SUID allows a program to run with the permissions of its owner (often root) instead of the user executing it.**
+`SUID`
+File permission bit
+Runs program as file owner
+Often root
 
+`sudo`
+Command
+Allows users to run commands as root
+Controlled by sudoers policy
 
 
 -------------------------------------------------------------------------------------------------------------------------------------------
