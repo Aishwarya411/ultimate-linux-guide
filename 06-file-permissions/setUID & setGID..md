@@ -2,7 +2,8 @@
 
 **SUID** stands for **Set User ID**.
 
-It is a **special Linux file permission** that allows a user to **run a program with the privileges of the file owner**, instead of the privileges of the user who executes the program.
+It is a **special Linux file permission** that allows a user to **run a PROGRAM with the privileges of the file owner**, instead of the privileges of the user who executes the program.
+So SUID is applied to executable files
 
 If the program is owned by **root**, it will temporarily run with **root privileges**.
 
@@ -119,10 +120,14 @@ passwd
 
 The program temporarily runs **with root privileges**.
 
-This allows the program to **update `/etc/shadow` safely**.
+This allows the program passwd to **update `/etc/shadow` safely**.
 
 Users still **do not get full root access**, only the specific operation needed.
+When you run passwd
 
+You type: passwd
+
+The passwd program executes. --> Because of SUID, it runs with root privileges, not your normal user privileges.--> Now it can edit /etc/shadow, even though you cannot touch that file yourself.
 ---
 
 # 4. How to Set SUID
@@ -270,6 +275,8 @@ This is similar to how **SUID allows limited privileged operations**.
 # 10. Short Definition
 
 **SUID allows a program to run with the permissions of its owner (often root) instead of the user executing it.**
+
+
 `SUID`
 File permission bit
 Runs program as file owner
@@ -286,4 +293,3 @@ Controlled by sudoers policy
 
 
 
-It provides **controlled privilege escalation** for necessary system operations.
